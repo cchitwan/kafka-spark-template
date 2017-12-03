@@ -1,0 +1,23 @@
+master: local[1]
+appName: my-test-app
+slidingIntervalSec: 5
+executers: 1
+kafkaStreamConfig:
+  brokerList: localhost:9092
+  zookeeperConnectionString: localhost:2181
+  zookeeperConnectTimeout: 1000
+  consumerGroup: my-test-app-gp
+  topic: test
+myOffsetRange: 500
+enableConfigLogging: true
+httpConnectionManagerConfig:
+  connectionTimeout: 7000
+  defaultMaxConnectionsPerHost: 2
+  maxTotalConnections: 10
+  soTimeout: 60000
+  soReuseAddress: true
+  soLinger: 0
+  soKeepAlive: true
+  tcpNoDelay: false
+#your additional configs
+name: spark-test-config
