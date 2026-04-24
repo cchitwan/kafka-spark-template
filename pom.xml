@@ -8,7 +8,7 @@
 
     <properties>
         <yamlparser.version>0.0.2</yamlparser.version>
-        <spark.version>2.4.3</spark.version>
+        <spark.version>3.4.0</spark.version>
         <scala.version>2.10.5</scala.version>
         <scala-library.version>2.10.5</scala-library.version>
     </properties>
