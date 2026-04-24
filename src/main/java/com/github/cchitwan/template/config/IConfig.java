@@ -32,6 +32,17 @@ public class IConfig implements Serializable {
     private boolean enableKafkaOffset = false;
 
     private boolean enableConfigLogging = false;
+
+    /**
+     * Structured Streaming: checkpoint location used for committing offsets and recovery. Required for production.
+     */
+    private String checkpointLocation;
+
+    /**
+     * structured streaming starting offsets, e.g. "earliest" or "latest" or a json string of offsets. Defaults to "latest".
+     */
+    private String startingOffsets = "latest";
+
     public String getParentConfig(){
         return enableConfigLogging==true?this.toString():"{config logging is disabled}";
     }
